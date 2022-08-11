@@ -439,3 +439,57 @@ for (var a = 0; a < 3; a++) {
 
 create_name();
 console.log(myName); */
+
+
+
+
+//*************************************** */
+//Lesson 25 - Browser Object Model (BOM)
+//*************************************** */
+
+//var myName = "Tom";
+
+/* 
+window.onmousemove = function (e) {
+    //console.log(e.pageY);
+    //console.log(e.pageX);
+
+    if (e.pageY < 5) {
+        alert("Don't miss our flash sale. Go to the products section for exclusive discounts.");
+    }
+} */
+
+
+
+//*************************************** */
+//Lesson 26 - Date and Time
+//*************************************** */
+
+
+//var dateObj = new Date(); //current date and time
+
+//////////////////////////////////////////////////////////////////////
+//Challenge: Calculating date intervals
+//If a product is ordered on March 26, 2020 and delivered on April, 02, 2020, how many days does it take to be delivered?
+/////////////////////////////////////////////////////////////////////////////////
+/* var orderDate = new Date("Mar 26 2020");
+var deliveryDate = new Date("Apr 02 2020");
+
+var nrDays = Math.ceil((deliveryDate - orderDate) / 86400000);
+
+document.getElementById("delivery_time").innerHTML = nrDays;
+
+ */
+
+//////////////////////////////////////////////////////////////////////
+//Challenge: Calculating date intervals
+//If a product is ordered on March 26, 2020 and takes 10 days to deliver the product, calculate the delivery date?
+/////////////////////////////////////////////////////////////////////////////////
+var orderDate = new Date("Mar 26 2020");
+
+//console.log("Initial date: " + orderDate);
+//console.log("Number of Days: " + orderDate / 86400000);
+
+var deliveryDate = (orderDate / 86400000);
+console.log(Date(deliveryDate));
+

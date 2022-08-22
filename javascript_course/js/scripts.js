@@ -413,7 +413,7 @@ for (var a = 0; a < employees.length; a++) {
 function create_name() {
     var personsName = 'Mary';
     console.log(personsName);
-} 
+}
 
 //create_name();
 
@@ -422,7 +422,7 @@ function create_name() {
     console.log(personsName);
 }
 
-console.log(personsName); 
+console.log(personsName);
 
 for (var a = 0; a < 3; a++) {
     console.log('Parent loop: ', a);
@@ -449,7 +449,7 @@ console.log(myName); */
 
 //var myName = "Tom";
 
-/* 
+/*
 window.onmousemove = function (e) {
     //console.log(e.pageY);
     //console.log(e.pageX);
@@ -485,11 +485,191 @@ document.getElementById("delivery_time").innerHTML = nrDays;
 //Challenge: Calculating date intervals
 //If a product is ordered on March 26, 2020 and takes 10 days to deliver the product, calculate the delivery date?
 /////////////////////////////////////////////////////////////////////////////////
-var orderDate = new Date("Mar 26 2020");
+/* var orderDate = new Date("Mar 26 2020");
 
 //console.log("Initial date: " + orderDate);
 //console.log("Number of Days: " + orderDate / 86400000);
 
-var deliveryDate = (orderDate / 86400000);
+var deliveryDate = orderDate / 86400000);
 console.log(Date(deliveryDate));
 
+ */
+
+
+
+//*************************************** */
+//Lesson 27 - tIME mETHODS
+//*************************************** */
+
+/* console.log("Message 1");
+
+window.setTimeout(function () {
+
+    console.log("Message 2");
+
+}, 3000);
+ */
+
+/* document.getElementById("show-loader").onclick = function () {
+    document.getElementById("spinner-loader").style.display = "block";
+
+    window.setTimeout(function () {
+        document.getElementById("spinner-loader").style.display = "none";
+
+    }, 2000);
+}; */
+
+/* var count = 0;
+
+var timeInterval = window.setInterval(function () {
+    console.log(count);
+    count++;
+    if (count >= 5) {
+        window.clearInterval(timeInterval);
+    }
+}, 1000); */
+
+//Exercise
+/*
+function add_leading_zero(number) {
+    if (number < 10) {
+        return "0" + number.toString();
+    } else {
+        return number.toString();
+    }
+};
+
+window.setInterval(function () {
+    var currentTime = new Date(); //current date and time
+
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+
+    document.getElementById("hours").innerHTML = add_leading_zero(hours);
+    document.getElementById("minutes").innerHTML = add_leading_zero(minutes);
+    document.getElementById("seconds").innerHTML = add_leading_zero(seconds);
+
+}, 1000); */
+
+
+
+//*************************************** */
+//Lesson 28 - Break and Continue
+//*************************************** */
+
+//Break
+/*
+var x = 0;
+
+while (x < 10) {
+    console.log(x);
+    x++;
+
+    if (x == 5) {
+        break;
+    }
+}
+ */
+
+//continue
+
+/* var num = 0;
+
+while (num < 20) {
+    num++;
+
+    if (num % 2 != 0) {
+        continue;
+    }
+
+    console.log(num);
+} */
+
+
+//*************************************** */
+//Lesson 29 - Forms
+//*************************************** */
+
+/* document.getElementById("show_option").onclick = function () {
+    var selectField = document.getElementById("options");
+    var selectedOption = selectField.options.selectedIndex;
+    var selectedValue = selectField.options[selectedOption];
+    //console.log(selectedValue.value);
+    //console.log(selectedValue.innerHTML);
+    document.getElementById("selected_option").innerHTML = selectedValue.innerHTML;
+
+
+     var selectedOption = document.getElementById("options").value;
+    console.log(selectedOption);
+};
+
+
+document.getElementById("show_radio").onclick = function () {
+    var radio = document.getElementsByName("gender");
+
+    var radio_selected;
+    for (var a = 0; a < radio.length; a++) {
+        if (radio[a].checked) {
+            radio_selected = radio[a];
+            console.log(radio_selected.value);
+            document.getElementById("selected_radio").innerHTML = radio_selected.value;
+        }
+    }
+
+
+};
+
+
+document.getElementById("show_check").onclick = function () {
+
+    var check = document.getElementsByName("interest");
+
+    document.getElementById("selected_check").innerHTML = "<ul>";
+
+    for (var a = 0; a < check.length; a++) {
+        if (check[a].checked) {
+            document.getElementById("selected_check").innerHTML += "<li>" + check[a].value + "</li>";
+        }
+    }
+    document.getElementById("selected_check").innerHTML += "</ul>";
+
+};
+ */
+
+
+
+
+//*************************************** */
+//Lesson 29 - The onchange event
+//*************************************** */
+
+/* document.getElementById("education_level").onchange = function () {
+
+    var selectField = document.getElementById("education_level");
+    var selectedOption = selectField.options.selectedIndex;
+    var selectedValue = selectField.options[selectedOption];
+    document.getElementById("selected_level").innerHTML = selectedValue.innerHTML;
+
+
+};
+
+
+var check = document.getElementsByName("meal");
+
+for (var a = 0; a < check.length; a++) {
+
+    check[a].onchange = function () {
+
+        document.getElementById("selected_check").innerHTML = "<ul>";
+
+        for (var b = 0; b < check.length; b++) {
+            if (check[b].checked) {
+                document.getElementById("selected_check").innerHTML += "<li>" + check[b].value + "</li>";
+            }
+        }
+
+        document.getElementById("selected_check").innerHTML += "</ul>";
+    };
+
+} */
